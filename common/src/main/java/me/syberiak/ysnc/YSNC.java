@@ -13,7 +13,7 @@ public final class YSNC {
     public static final String MOD_ID = "ysnc";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static final TagKey<EntityType<?>> CANT_CLIMB_LADDERS_TAG = TagKey.create(
-            Registries.ENTITY_TYPE, new ResourceLocation(MOD_ID, "cant_climb_ladders")
+            Registries.ENTITY_TYPE, ResourceLocation.tryBuild(MOD_ID, "cant_climb_ladders")
     );
     public static final boolean DEBUG_TURN_OFF = false;
 
