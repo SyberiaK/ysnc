@@ -33,7 +33,7 @@ jobs:
       - name: Get GitHub Release version
         id: release-version
         run: |
-          version=$(echo ${{ github.event.release.tag_name }} | cut -d'v' -f2)
+          version=$(echo "${{ github.event.release.tag_name }}" | cut -d'v' -f2)
           echo "::set-output name=version::$version"
 
       - name: Upload ${{ matrix.name }} assets to CurseForge and Modrinth
