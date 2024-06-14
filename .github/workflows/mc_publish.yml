@@ -38,8 +38,8 @@ jobs:
           files: ${{ matrix.platform }}/build/libs/!(*-@(dev|sources|javadoc|dev-shadow)).jar
           loaders: ${{ matrix.platform }}
           game-versions: |
-            >=1.20.5
-            <1.21
+            1.20.5
+            1.20.6
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           curseforge-id: 1036834
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
