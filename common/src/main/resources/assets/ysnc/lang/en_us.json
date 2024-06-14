@@ -1,0 +1,5 @@
+{
+  "fml.menu.mods.info.description.ysnc": "MC-148545 \"Mobs can climb ladders\" was labeled by Mojang as \"Works As Intended\".\nObviously, this doesn't make any sense since most of the mobs don't use ladders deliberately.\nIt feels more like a side effect that is actually easy to fix, which is exactly what this mod does.",
+  "modmenu.summaryTranslation.ysnc": "Takes away an ability to climb ladders from mobs that are not supposed to have it.",
+  "modmenu.descriptionTranslation.ysnc": "MC-148545 \"Mobs can climb ladders\" was labeled by Mojang as \"Works As Intended\".\nObviously, this doesn't make any sense since most of the mobs don't use ladders deliberately.\nIt feels more like a side effect that is actually easy to fix, which is exactly what this mod does."
+}

@@ -1,0 +1,38 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+issueTrackerURL = "${issues_page}"
+license = "MIT"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${version}"
+displayName = "${mod_name}"
+authors = "SyberiaK"
+description = '''
+${default_description}
+'''
+logoFile = "assets/${mod_id}/icon.png"
+
+[[dependencies.ymncl]]
+modId = "neoforge"
+type = "required"
+versionRange = "[20.5.21-beta, 20.6)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.ymncl]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.20.5, 1.20.6]"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.ymncl]]
+modId = "architectury"
+type = "required"
+versionRange = "[11.1.17, 12.1.2]"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "${mod_id}.mixins.json"
