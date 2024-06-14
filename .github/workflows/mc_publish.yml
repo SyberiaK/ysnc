@@ -34,7 +34,7 @@ jobs:
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           name: ${{ github.event.release.name }} - ${{ matrix.name }}
-          version: ${{ github.event.release.name }}
+          version: ${{ github.event.release.tag_name }}
           files: ${{ matrix.platform }}/build/libs/!(*-@(dev|sources|javadoc|dev-shadow)).jar
           loaders: ${{ matrix.platform }}
           game-versions: |
