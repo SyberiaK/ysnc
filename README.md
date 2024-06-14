@@ -7,8 +7,9 @@
 **"You Shall Not Climb!" (YSNC)** is a Fabric server-side mod that takes away an ability to climb ladders from mobs that are not supposed to have it.
 
 [MC-148545 **"Mobs can climb ladders"**](https://bugs.mojang.com/browse/MC-148545) was labeled by Mojang as **"Works As Intended"**.
+
 ![Comparing "intended" behavior VS my mod](https://raw.githubusercontent.com/SyberiaK/ysnc/main/media/before_after.webp)
-Obviously, this doesn't make any sense since most of the mobs don't use ladders deliberately.
+Obviously, this doesn't make any sense since it's expected that most of the mobs don't use ladders deliberately.
 
 It feels more like a side effect that is actually easy to fix, which is what this mod does.
 
