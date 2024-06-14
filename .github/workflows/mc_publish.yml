@@ -30,18 +30,14 @@ jobs:
       - name: Build
         run: ./gradlew clean build
 
-      - name: Get GitHub Release version
-        id: release-version
-        run: |
-          version=$(echo "${{ github.event.release.tag_name }}" | cut -d'v' -f2)
-          echo "::set-output name=version::$version"
-
       - name: Upload ${{ matrix.name }} assets to CurseForge and Modrinth
         uses: Kir-Antipov/mc-publish@v3.3
         with:
-          name: ${{ steps.release-version.outputs.version }} - ${{ matrix.name }}
+          name: ${{ github.event.release.tag_name }} - ${{ matrix.name }}
           version: ${{ github.event.release.tag_name }}
-          files: ${{ matrix.platform }}/build/libs/ysnc-*.jar
+          files: |
+            ${{ matrix.platform }}/build/libs/!(*-@(dev|sources|javadoc)).jar
+            ${{ matrix.platform }}/build/libs/*-@(dev|sources|javadoc).jar
           loaders: ${{ matrix.platform }}
           game-versions: |
             1.19
