@@ -35,9 +35,7 @@ jobs:
         with:
           name: ${{ github.event.release.tag_name }} - ${{ matrix.name }}
           version: ${{ github.event.release.tag_name }}
-          files: |
-            ${{ matrix.platform }}/build/libs/!(*-@(dev|sources|javadoc)).jar
-            ${{ matrix.platform }}/build/libs/*-@(dev|sources|javadoc).jar
+          files: ${{ matrix.platform }}/build/libs/!(*-@(dev|sources|javadoc)).jar
           loaders: ${{ matrix.platform }}
           game-versions: |
             1.19
