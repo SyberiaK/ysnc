@@ -35,7 +35,7 @@ jobs:
         with:
           name: ${{ github.event.release.name }} - ${{ matrix.name }}
           version: ${{ github.event.release.name }}
-          files: ${{ matrix.platform }}/build/libs/!(*-@(dev|sources|javadoc)).jar
+          files: ${{ matrix.platform }}/build/libs/!(*-@(dev|sources|javadoc|dev-shadow)).jar
           loaders: ${{ matrix.platform }}
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           curseforge-id: 1036834
