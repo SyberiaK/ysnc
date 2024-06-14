@@ -5,6 +5,13 @@ on:
 
 jobs:
   mc_publish:
+    strategy:
+      matrix:
+        include:
+          - platform: neoforge
+            name: NeoForge
+          - platform: fabric
+            name: Fabric
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -22,8 +29,24 @@ jobs:
         run: chmod +x ./gradlew
       - name: Build
         run: ./gradlew clean build
-      - name: Publish using mc-publish
-        uses: Kir-Antipov/mc-publish@v3.3.0
+
+      - name: Get GitHub Release version
+        id: release-version
+        run: |
+          version=$(echo ${{ github.event.release.tag_name }} | cut -d'v' -f2)
+          echo "::set-output name=version::$version"
+
+      - name: Upload ${{ matrix.name }} assets to CurseForge and Modrinth
+        uses: Kir-Antipov/mc-publish@v3.1
         with:
+          name: ${{ steps.release-version.outputs.version }} - ${{ matrix.name }}
+          version: ${{ steps.release-version.outputs.version }}
+          files-primary: ${{ matrix.platform }}/build/libs/ysnc-*.jar
+          files-secondary: ""
+          loaders: ${{ matrix.platform }}
+          game-versions: |
+            1.19
+            1.19.1
+            1.19.2
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
