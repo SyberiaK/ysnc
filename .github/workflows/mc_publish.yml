@@ -41,8 +41,7 @@ jobs:
         with:
           name: ${{ steps.release-version.outputs.version }} - ${{ matrix.name }}
           version: ${{ steps.release-version.outputs.version }}
-          files-primary: ${{ matrix.platform }}/build/libs/ysnc-*.jar
-          files-secondary: ""
+          files: ${{ matrix.platform }}/build/libs/ysnc-*.jar
           loaders: ${{ matrix.platform }}
           game-versions: |
             1.19
