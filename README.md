@@ -1,13 +1,13 @@
 # You Shall Not Climb!
 
-[![Modrinth Downloads](https://img.shields.io/modrinth/dt/Vh8I4R2O?style=for-the-badge&logo=modrinth&color=00AF5C)](https://modrinth.com/mod/ysnc)
-[![CurseForge Downloads](https://img.shields.io/curseforge/dt/783565?style=for-the-badge&logo=curseforge&color=F16436)](https://www.curseforge.com/minecraft/mc-mods/ysnc)
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/LH8X4V9N?style=for-the-badge&logo=modrinth&color=00AF5C)](https://modrinth.com/mod/ysnc)
+[![CurseForge Downloads](https://img.shields.io/curseforge/dt/1036834?style=for-the-badge&logo=curseforge&color=F16436)](https://www.curseforge.com/minecraft/mc-mods/ysnc)
 [![GitHub source code](https://img.shields.io/badge/Source_code-Available-brightgreen?style=for-the-badge&logo=github&label=Source%20code)](https://github.com/SyberiaK/ysnc)
 
 **"You Shall Not Climb!" (YSNC)** is a Fabric server-side mod that takes away an ability to climb ladders from mobs that are not supposed to have it.
 
 [MC-148545 **"Mobs can climb ladders"**](https://bugs.mojang.com/browse/MC-148545) was labeled by Mojang as **"Works As Intended"**.
-![Comparing "intended" behavior VS my mod](https://github.com/SyberiaK/ysnc/raw/master/media/before_after.webp)
+![Comparing "intended" behavior VS my mod](https://raw.githubusercontent.com/SyberiaK/ysnc/main/media/before_after.webp)
 Obviously, this doesn't make any sense since most of the mobs don't use ladders deliberately.
 
 It feels more like a side effect that is actually easy to fix, which is what this mod does.
@@ -40,4 +40,4 @@ It feels more like a side effect that is actually easy to fix, which is what thi
 ## Credits
 - **SyberiaK** - mod author
 - **DeDiamondPro** - came up with a great mod name that many people like:
-  ![screenshot of suggestion](https://github.com/SyberiaK/ysnc/raw/master/media/naming.png)
+  ![screenshot of suggestion](https://raw.githubusercontent.com/SyberiaK/ysnc/main/media/naming.png)
